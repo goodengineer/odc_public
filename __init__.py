@@ -75,7 +75,7 @@ def update_brackets(self,context):
 class ODCAddonPreferences(AddonPreferences):
     bl_idname = __name__
 
-    addons = bpy.context.user_preferences.addons
+    #addons = bpy.context.user_preferences.addons
     
     folderpath = os.path.dirname(os.path.abspath(__file__))
     print('SETTINGS FOLDERPATH')
