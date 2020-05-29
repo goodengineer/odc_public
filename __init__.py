@@ -75,7 +75,8 @@ def update_brackets(self,context):
 class ODCAddonPreferences(AddonPreferences):
     bl_idname = __name__
 
-    addons = bpy.context.user_preferences.addons
+  # how to make it work for Bforartists as well w/o attribute errors
+    #addons = bpy.context.user_preferences.addons
     
     folderpath = os.path.dirname(os.path.abspath(__file__))
     print('SETTINGS FOLDERPATH')
@@ -193,6 +194,8 @@ class OPENDENTAL_OT_addon_prefs_odc(Operator):
     bl_options = {'REGISTER', 'UNDO'}
 
     def execute(self, context):
+        
+      # here for Bforartists? attribute errors?
         user_preferences = context.user_preferences
         addon_prefs = user_preferences.addons[__name__].preferences
 
